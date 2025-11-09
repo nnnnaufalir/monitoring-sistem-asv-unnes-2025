@@ -1,0 +1,128 @@
+/* --- LANGKAH V-FINAL --- */
+
+/* 1. IZINKAN SCROLL JIKA PERLU */
+body {
+  /* overflow-y: hidden; DIHAPUS */
+}
+
+/* 2. UKURAN PETA (55vh) */
+.map-container {
+  max-width: 55vh;
+  margin: 0 auto;
+}
+#map {
+  max-height: 55vh;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+/* 3. UKURAN KARTU (Normal) */
+.card-header {
+  padding: 0.6rem 1rem;
+}
+.card-body {
+  padding: 0.8rem;
+}
+/* Beri padding berbeda untuk kolom kiri & kanan */
+.col-lg-3 .card-body {
+  padding: 0.8rem;
+}
+.card-body .col-7 {
+  padding-left: 0.75rem;
+}
+.card-body .col-5 {
+  padding-right: 0.75rem;
+}
+
+/* 4. UKURAN FONT (Normal) */
+.card-title {
+  font-size: 1rem;
+}
+.map-container .small {
+  font-size: 0.85rem;
+  margin-top: 0.25rem !important;
+}
+.card-body .d-flex .card-title {
+  margin-bottom: 0 !important;
+}
+
+/* 5. UKURAN FONT DATA BESAR */
+.display-4 {
+  /* Trajectory Grid (A1) */
+  font-size: 2.5rem;
+}
+.display-5 {
+  /* Waktu Lomba BARU */
+  font-size: 2.25rem;
+}
+.display-6 {
+  /* SOG Baru */
+  font-size: 2rem;
+}
+
+/* Penyesuaian Kartu Attitude (BARU) */
+.card-body .h6,
+.card-body .h5 {
+  font-size: 1rem;
+  margin-bottom: 0.1rem !important;
+}
+.card-body .small {
+  font-size: 0.85rem;
+}
+.card-body .fw-bold.small {
+  font-size: 0.9rem;
+}
+
+.card-body hr {
+  margin: 0.5rem 0;
+}
+.card-body p.small {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+.list-group-item {
+  padding: 0.4rem 0.55rem;
+}
+
+/* 6. ATUR GAMBAR MISI */
+#surface-image,
+#underwater-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  height: auto;
+}
+.card-body h3.h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- CSS LAMA (Biarkan saja) --- */
+.status-pending {
+  color: #888;
+  font-style: italic;
+}
+.status-done {
+  color: #198754;
+  font-weight: bold;
+}
+.leaflet-control-attribution {
+  display: none !important;
+}
+.track-b-active .leaflet-image-layer {
+  transform: scaleX(-1);
+}
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.col-lg-3.d-flex .card {
+  flex-grow: 1;
+}
